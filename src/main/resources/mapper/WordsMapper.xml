@@ -7,4 +7,7 @@
     <select id="getWordList" resultType="com.mysite.sbbpage.Word">
         SELECT id,word FROM page_tb ORDER BY id DESC LIMIT 10
     </select>
+    <select id="getWordListOffset" resultType="com.mysite.sbbpage.Word">
+        SELECT id,word FROM page_tb ORDER BY id DESC LIMIT #{size} OFFSET #{offset};
+    </select>
 </mapper>

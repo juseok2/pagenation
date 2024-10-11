@@ -16,4 +16,9 @@ public class WordService {
 	public List<Word>getWordList(){
 		return wordMapper.getWordList();
 	}
+	public List<Word> getWordList(int page, int size) {
+		int offset = (page - 1) * size;
+		// TODO Auto-generated method stub
+		return wordMapper.getWordListOffset(offset, size);
+	}
 }
