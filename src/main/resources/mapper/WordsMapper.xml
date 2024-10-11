@@ -4,4 +4,7 @@
     <select id="getWordById" resultType="com.mysite.sbbpage.Word">
         SELECT id, word FROM page_tb WHERE id = #{id}
     </select>
+    <select id="getWordList" resultType="com.mysite.sbbpage.Word">
+        SELECT id,word FROM page_tb ORDER BY id DESC LIMIT 10
+    </select>
 </mapper>
